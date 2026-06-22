@@ -2,51 +2,51 @@
 <rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>바로 GO 매거진</title>
-    <link>https://www.barogo-gimpo.example.com/magazine/</link>
-    <description>김포시 출장마사지·홈타이</description>
+    <link>https://gimpo-massage.pages.dev/magazine/</link>
+    <description>김포시 출장마사지·홈타이 방문 예약 안내. 구래·장기·운양·풍무·고촌 생활권 확인. 전화 0508-202-4719.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 22 Jun 2026 09:30:05 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 13:03:27 +0000</lastBuildDate>
     <item>
       <title>마사지 비교 가이드</title>
-      <link>https://www.barogo-gimpo.example.com/magazine/swedish-vs-thai/</link>
+      <link>https://gimpo-massage.pages.dev/magazine/swedish-vs-thai/</link>
       <description>스웨디시와 타이마사지의 효과 차이 이해하기</description>
       <pubDate>Thu, 20 Jun 2024 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://www.barogo-gimpo.example.com/magazine/swedish-vs-thai/</guid>
+      <guid isPermaLink="true">https://gimpo-massage.pages.dev/magazine/swedish-vs-thai/</guid>
     </item>
     <item>
       <title>처음 이용 가이드</title>
-      <link>https://www.barogo-gimpo.example.com/magazine/first-time-guide/</link>
+      <link>https://gimpo-massage.pages.dev/magazine/first-time-guide/</link>
       <description>출장마사지 처음 예약하는 분들을 위한 가이드</description>
       <pubDate>Wed, 19 Jun 2024 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://www.barogo-gimpo.example.com/magazine/first-time-guide/</guid>
+      <guid isPermaLink="true">https://gimpo-massage.pages.dev/magazine/first-time-guide/</guid>
     </item>
     <item>
       <title>수면과 마사지</title>
-      <link>https://www.barogo-gimpo.example.com/magazine/sleep-and-massage/</link>
+      <link>https://gimpo-massage.pages.dev/magazine/sleep-and-massage/</link>
       <description>마사지가 수면의 질을 개선하는 방법</description>
       <pubDate>Tue, 18 Jun 2024 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://www.barogo-gimpo.example.com/magazine/sleep-and-massage/</guid>
+      <guid isPermaLink="true">https://gimpo-massage.pages.dev/magazine/sleep-and-massage/</guid>
     </item>
     <item>
       <title>운동 후 회복</title>
-      <link>https://www.barogo-gimpo.example.com/magazine/post-workout-timing/</link>
+      <link>https://gimpo-massage.pages.dev/magazine/post-workout-timing/</link>
       <description>운동 후 마사지의 최적 타이밍</description>
       <pubDate>Mon, 17 Jun 2024 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://www.barogo-gimpo.example.com/magazine/post-workout-timing/</guid>
+      <guid isPermaLink="true">https://gimpo-massage.pages.dev/magazine/post-workout-timing/</guid>
     </item>
     <item>
       <title>어깨·목 결림 관리</title>
-      <link>https://www.barogo-gimpo.example.com/magazine/neck-shoulder-care/</link>
+      <link>https://gimpo-massage.pages.dev/magazine/neck-shoulder-care/</link>
       <description>오래 앉아서 일하는 분들을 위한 경락 관리</description>
       <pubDate>Sun, 16 Jun 2024 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://www.barogo-gimpo.example.com/magazine/neck-shoulder-care/</guid>
+      <guid isPermaLink="true">https://gimpo-massage.pages.dev/magazine/neck-shoulder-care/</guid>
     </item>
     <item>
       <title>부모님 선물 가이드</title>
-      <link>https://www.barogo-gimpo.example.com/magazine/parents-gift/</link>
+      <link>https://gimpo-massage.pages.dev/magazine/parents-gift/</link>
       <description>효도 선물로 받는 마사지 처음 경험하기</description>
       <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
-      <guid isPermaLink="true">https://www.barogo-gimpo.example.com/magazine/parents-gift/</guid>
+      <guid isPermaLink="true">https://gimpo-massage.pages.dev/magazine/parents-gift/</guid>
     </item>
   </channel>
 </rss>

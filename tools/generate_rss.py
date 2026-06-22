@@ -14,11 +14,12 @@ from xml.dom import minidom
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT_DIR = os.path.join(ROOT, "content")
 
-sys.path.insert(0, CONTENT_DIR)
+# content 패키지로 import (builtin `site` 모듈과의 충돌 방지)
+sys.path.insert(0, ROOT)
 try:
-    from site import BASE_URL, BRAND, PHONE_DISPLAY, SITE_DESC
+    from content.site import BASE_URL, BRAND, PHONE_DISPLAY, SITE_DESC
 except ImportError:
-    BASE_URL = "https://www.barogo-gimpo.example.com"
+    BASE_URL = "https://gimpo-massage.pages.dev"
     BRAND = "바로 GO"
     SITE_DESC = "김포시 출장마사지·홈타이"
 
@@ -170,11 +171,15 @@ def generate_sitemap_rss():
             if loc and count < 100:  # 최근 100개만
                 item = ET.SubElement(channel, "item")
 
+                slug = "home" if loc.rstrip("/") == BASE_URL.rstrip("/") else loc.rstrip("/").split("/")[-1]
                 title_item = ET.SubElement(item, "title")
-                title_item.text = loc.split("/")[-2] or BRAND
+                title_item.text = f"{BRAND} - {slug}"
 
                 link_item = ET.SubElement(item, "link")
                 link_item.text = loc
+
+                desc_item = ET.SubElement(item, "description")
+                desc_item.text = f"{BRAND} {slug} 페이지"
 
                 pubdate = ET.SubElement(item, "pubDate")
                 pubdate.text = datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S +0000")
