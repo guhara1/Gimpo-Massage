@@ -318,5 +318,20 @@ def build() -> None:
     print(f"\n{len(report)} pages built, {len(sitemap_urls)} in sitemap.")
 
 
+def notify_search_engines() -> None:
+    """검색엔진에 색인 통보 (선택)"""
+    import subprocess
+
+    print("\n" + "=" * 60)
+    print("💡 팁: 검색엔진에 색인 통보")
+    print("=" * 60)
+    print("✓ Sitemap: robots.txt에 자동 포함됨")
+    print("✓ 즉시 통보: python3 tools/indexnow.py")
+    print("  - IndexNow API (Bing, Naver)")
+    print("  - Sitemap Ping (Google, Bing, Naver)")
+    print()
+
+
 if __name__ == "__main__":
     build()
+    notify_search_engines()
