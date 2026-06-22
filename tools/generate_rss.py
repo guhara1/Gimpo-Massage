@@ -8,6 +8,7 @@ import os
 import sys
 from datetime import datetime
 from xml.etree import ElementTree as ET
+from xml.dom import minidom
 
 # 설정
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,6 +21,13 @@ except ImportError:
     BASE_URL = "https://www.barogo-gimpo.example.com"
     BRAND = "바로 GO"
     SITE_DESC = "김포시 출장마사지·홈타이"
+
+
+def pretty_print_xml(elem):
+    """XML을 읽기 좋게 포매팅"""
+    rough_string = ET.tostring(elem, encoding='unicode')
+    reparsed = minidom.parseString(rough_string)
+    return reparsed.toprettyxml(indent="  ")
 
 
 def generate_magazine_rss():
@@ -65,7 +73,10 @@ def generate_magazine_rss():
     ]
 
     # RSS 2.0 생성
-    rss = ET.Element("rss", version="2.0", attrib={"xmlns:content": "http://purl.org/rss/1.0/modules/content/"})
+    rss = ET.Element("rss", version="2.0")
+    rss.set("xmlns:content", "http://purl.org/rss/1.0/modules/content/")
+    rss.set("xmlns:atom", "http://www.w3.org/2005/Atom")
+
     channel = ET.SubElement(rss, "channel")
 
     # Channel 정보
@@ -78,11 +89,11 @@ def generate_magazine_rss():
     desc_elem = ET.SubElement(channel, "description")
     desc_elem.text = SITE_DESC
 
+    language = ET.SubElement(channel, "language")
+    language.text = "ko"
+
     lastbuild = ET.SubElement(channel, "lastBuildDate")
     lastbuild.text = datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S +0000")
-
-    language = ET.SubElement(channel, "language")
-    language.text = "ko-KR"
 
     # Items
     for mag in magazines:
@@ -98,7 +109,7 @@ def generate_magazine_rss():
         description.text = mag["desc"]
 
         pubdate = ET.SubElement(item, "pubDate")
-        pubdate.text = datetime.fromisoformat(mag["date"]).strftime("%a, %d %b %Y %H:%M:%S +0000")
+        pubdate.text = datetime.fromisoformat(mag["date"]).strftime("%a, %d %b %Y 00:00:00 +0000")
 
         guid = ET.SubElement(item, "guid", isPermaLink="true")
         guid.text = BASE_URL.rstrip("/") + "/" + mag["path"]
@@ -107,8 +118,13 @@ def generate_magazine_rss():
     output_file = os.path.join(ROOT, "magazine", "feed.xml")
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
-    tree = ET.ElementTree(rss)
-    tree.write(output_file, encoding="utf-8", xml_declaration=True)
+    # 포매팅된 XML 작성
+    xml_str = pretty_print_xml(rss)
+    # <?xml 선언 제거 후 다시 추가 (포매팅 시 2개가 생김)
+    xml_lines = xml_str.split('\n')[1:]  # 첫 번째 라인 제거
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+        f.write('\n'.join(xml_lines))
 
     print(f"✓ RSS 피드 생성: {output_file}")
     print(f"  URL: {BASE_URL.rstrip('/')}/magazine/feed.xml")
@@ -128,6 +144,8 @@ def generate_sitemap_rss():
         root = tree.getroot()
 
         rss = ET.Element("rss", version="2.0")
+        rss.set("xmlns:atom", "http://www.w3.org/2005/Atom")
+
         channel = ET.SubElement(rss, "channel")
 
         title = ET.SubElement(channel, "title")
@@ -139,11 +157,17 @@ def generate_sitemap_rss():
         desc = ET.SubElement(channel, "description")
         desc.text = f"{BRAND} 전체 페이지 업데이트"
 
+        language = ET.SubElement(channel, "language")
+        language.text = "ko"
+
+        lastbuild = ET.SubElement(channel, "lastBuildDate")
+        lastbuild.text = datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S +0000")
+
         # Sitemap의 URL을 item으로 변환
         count = 0
         for url_elem in root.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc'):
             loc = url_elem.text
-            if loc and count < 50:  # 최근 50개만
+            if loc and count < 100:  # 최근 100개만
                 item = ET.SubElement(channel, "item")
 
                 title_item = ET.SubElement(item, "title")
@@ -152,14 +176,22 @@ def generate_sitemap_rss():
                 link_item = ET.SubElement(item, "link")
                 link_item.text = loc
 
+                pubdate = ET.SubElement(item, "pubDate")
+                pubdate.text = datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S +0000")
+
                 guid = ET.SubElement(item, "guid", isPermaLink="true")
                 guid.text = loc
 
                 count += 1
 
         output_file = os.path.join(ROOT, "feed.xml")
-        tree = ET.ElementTree(rss)
-        tree.write(output_file, encoding="utf-8", xml_declaration=True)
+
+        # 포매팅된 XML 작성
+        xml_str = pretty_print_xml(rss)
+        xml_lines = xml_str.split('\n')[1:]
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+            f.write('\n'.join(xml_lines))
 
         print(f"✓ Sitemap RSS 생성: {output_file}")
 
@@ -180,3 +212,4 @@ if __name__ == "__main__":
     print("📌 RSS 리더에 등록:")
     print(f"   • 매거진: {BASE_URL.rstrip('/')}/magazine/feed.xml")
     print(f"   • 전체: {BASE_URL.rstrip('/')}/feed.xml")
+
