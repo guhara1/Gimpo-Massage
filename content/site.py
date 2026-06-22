@@ -16,6 +16,12 @@ SITE_DESC = "김포시 출장마사지·홈타이 방문 예약 안내. 구래·
 # 제작·제휴 문의 텔레그램 링크
 TELEGRAM_URL = "https://t.me/googleseolab"
 
+# 네이버 Search Advisor 인증 (HTML 메타 태그 방식)
+NAVER_SITE_VERIFICATION = "89cdb73eae87756cee5d8b474b0d97b85f823c0a"
+
+# 구글 Search Console 인증 (필요시)
+GOOGLE_SITE_VERIFICATION = ""  # 구글에서 발급받은 코드 입력
+
 # 상단 메뉴 — 하위 메뉴에는 "출장마사지"를 반복하지 않고 지역명·역명만 표시한다.
 NAV = [
     ("김포 홈", HOME, []),

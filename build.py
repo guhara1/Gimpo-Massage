@@ -18,7 +18,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from content import PAGES
 from content.site import (BASE_URL, BRAND, BRAND_MARK, HOME, NAV, PHONE,
-                          PHONE_DISPLAY, SITE_DESC, TELEGRAM_URL)
+                          PHONE_DISPLAY, SITE_DESC, TELEGRAM_URL,
+                          NAVER_SITE_VERIFICATION, GOOGLE_SITE_VERIFICATION)
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 MIN_INDEX_CHARS = 2000
@@ -145,7 +146,8 @@ def render_page(page: dict) -> str:
 <meta name="description" content="{desc}">
 {robots}
 <link rel="canonical" href="{canonical}">
-<meta property="og:type" content="website">
+<meta name="naver-site-verification" content="{NAVER_SITE_VERIFICATION}">
+{f'<meta name="google-site-verification" content="{GOOGLE_SITE_VERIFICATION}">' if GOOGLE_SITE_VERIFICATION else ''}
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{canonical}">
