@@ -7,8 +7,8 @@ BRAND_MARK = "GO"
 PHONE = "0508-202-4719"
 PHONE_DISPLAY = "0508-202-4719"
 
-# 김포시 메인(허브) 경로 — 루트(/)는 이 주소로 리다이렉트한다.
-HOME = "/gyeonggi/gimpo/"
+# 김포시 메인(허브) 경로 — 루트(/)에서 바로 서빙.
+HOME = "/"
 
 # 80자 이내 사이트 디스크립션(상호·연락 포함)
 SITE_DESC = "김포시 출장마사지·홈타이 방문 예약 안내. 구래·장기·운양·풍무·고촌 생활권 확인. 전화 0508-202-4719."
@@ -20,47 +20,47 @@ TELEGRAM_URL = "https://t.me/googleseolab"
 NAV = [
     ("김포 홈", HOME, []),
     ("지역별 안내", HOME + "#areas", [
-        ("김포본동", "/gyeonggi/gimpo/gimpobon-dong/"),
-        ("사우동", "/gyeonggi/gimpo/sau-dong/"),
-        ("풍무동", "/gyeonggi/gimpo/pungmu-dong/"),
-        ("장기본동", "/gyeonggi/gimpo/janggibon-dong/"),
-        ("장기동", "/gyeonggi/gimpo/janggi-dong/"),
-        ("운양동", "/gyeonggi/gimpo/unyang-dong/"),
-        ("구래동", "/gyeonggi/gimpo/gurae-dong/"),
-        ("마산동", "/gyeonggi/gimpo/masan-dong/"),
-        ("고촌읍", "/gyeonggi/gimpo/gochon-eup/"),
-        ("양촌읍", "/gyeonggi/gimpo/yangchon-eup/"),
-        ("통진읍", "/gyeonggi/gimpo/tongjin-eup/"),
-        ("대곶면", "/gyeonggi/gimpo/daegot-myeon/"),
-        ("월곶면", "/gyeonggi/gimpo/wolgot-myeon/"),
-        ("하성면", "/gyeonggi/gimpo/haseong-myeon/"),
+        ("김포본동", "/gimpobon-dong/"),
+        ("사우동", "/sau-dong/"),
+        ("풍무동", "/pungmu-dong/"),
+        ("장기본동", "/janggibon-dong/"),
+        ("장기동", "/janggi-dong/"),
+        ("운양동", "/unyang-dong/"),
+        ("구래동", "/gurae-dong/"),
+        ("마산동", "/masan-dong/"),
+        ("고촌읍", "/gochon-eup/"),
+        ("양촌읍", "/yangchon-eup/"),
+        ("통진읍", "/tongjin-eup/"),
+        ("대곶면", "/daegot-myeon/"),
+        ("월곶면", "/wolgot-myeon/"),
+        ("하성면", "/haseong-myeon/"),
     ]),
-    ("역세권 안내", "/gyeonggi/gimpo/station/", [
-        ("역 전체", "/gyeonggi/gimpo/station/"),
-        ("고촌역", "/gyeonggi/gimpo/station/gochon-station/"),
-        ("풍무역", "/gyeonggi/gimpo/station/pungmu-station/"),
-        ("사우역", "/gyeonggi/gimpo/station/sau-station/"),
-        ("장기역", "/gyeonggi/gimpo/station/janggi-station/"),
-        ("운양역", "/gyeonggi/gimpo/station/unyang-station/"),
-        ("구래역", "/gyeonggi/gimpo/station/gurae-station/"),
-        ("마산역", "/gyeonggi/gimpo/station/masan-station/"),
-        ("양촌역", "/gyeonggi/gimpo/station/yangchon-station/"),
-        ("김포공항 인접", "/gyeonggi/gimpo/station/gimpo-airport-nearby-area/"),
+    ("역세권 안내", "/station/", [
+        ("역 전체", "/station/"),
+        ("고촌역", "/station/gochon-station/"),
+        ("풍무역", "/station/pungmu-station/"),
+        ("사우역", "/station/sau-station/"),
+        ("장기역", "/station/janggi-station/"),
+        ("운양역", "/station/unyang-station/"),
+        ("구래역", "/station/gurae-station/"),
+        ("마산역", "/station/masan-station/"),
+        ("양촌역", "/station/yangchon-station/"),
+        ("김포공항 인접", "/station/gimpo-airport-nearby-area/"),
     ]),
-    ("생활권 안내", "/gyeonggi/gimpo/area/", [
-        ("생활권 전체", "/gyeonggi/gimpo/area/"),
-        ("김포한강신도시", "/gyeonggi/gimpo/area/hangang-newtown/"),
-        ("구래·마산", "/gyeonggi/gimpo/area/gurae-masan/"),
-        ("장기·운양", "/gyeonggi/gimpo/area/janggi-unyang/"),
-        ("사우·김포시청", "/gyeonggi/gimpo/area/sau-cityhall/"),
-        ("풍무·고촌", "/gyeonggi/gimpo/area/pungmu-gochon/"),
-        ("고촌·아라뱃길", "/gyeonggi/gimpo/area/gochon-ara-waterway/"),
-        ("양촌·학운산단", "/gyeonggi/gimpo/area/yangchon-hagun-industrial/"),
-        ("통진·마송", "/gyeonggi/gimpo/area/tongjin-masong/"),
-        ("대곶·산업단지", "/gyeonggi/gimpo/area/daegot-industrial/"),
-        ("월곶·문수산", "/gyeonggi/gimpo/area/wolgot-munsusan/"),
-        ("하성·북부김포", "/gyeonggi/gimpo/area/haseong-north-gimpo/"),
-        ("김포공항·서울 인접", "/gyeonggi/gimpo/area/gimpo-airport-seoul-nearby/"),
+    ("생활권 안내", "/area/", [
+        ("생활권 전체", "/area/"),
+        ("김포한강신도시", "/area/hangang-newtown/"),
+        ("구래·마산", "/area/gurae-masan/"),
+        ("장기·운양", "/area/janggi-unyang/"),
+        ("사우·김포시청", "/area/sau-cityhall/"),
+        ("풍무·고촌", "/area/pungmu-gochon/"),
+        ("고촌·아라뱃길", "/area/gochon-ara-waterway/"),
+        ("양촌·학운산단", "/area/yangchon-hagun-industrial/"),
+        ("통진·마송", "/area/tongjin-masong/"),
+        ("대곶·산업단지", "/area/daegot-industrial/"),
+        ("월곶·문수산", "/area/wolgot-munsusan/"),
+        ("하성·북부김포", "/area/haseong-north-gimpo/"),
+        ("김포공항·서울 인접", "/area/gimpo-airport-seoul-nearby/"),
     ]),
     ("테마별 안내", "/themes/", [
         ("전체 테마", "/themes/"),

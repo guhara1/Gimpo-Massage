@@ -41,8 +41,7 @@ _JSONLD = f"""<script type="application/ld+json">
   "@type": "BreadcrumbList",
   "itemListElement": [
     {{"@type": "ListItem", "position": 1, "name": "홈", "item": "{BASE_URL.rstrip('/')}/"}},
-    {{"@type": "ListItem", "position": 2, "name": "경기도", "item": "{BASE_URL.rstrip('/')}/gyeonggi/"}},
-    {{"@type": "ListItem", "position": 3, "name": "김포시", "item": "{_CANON}"}}
+    {{"@type": "ListItem", "position": 2, "name": "김포시", "item": "{_CANON}"}}
   ]
 }}
 </script>
@@ -107,34 +106,34 @@ _BODY = f"""
 
 <section id="zones">
 <h2>구래·마산·장기·운양·풍무 생활권 차이</h2>
-<p>김포시 홈타이를 안내할 때 중요한 부분은 생활권을 무리하게 쪼개지 않는 것입니다. 김포시는 동 지역과 읍·면 지역의 성격 차이가 큽니다. <a href="/gyeonggi/gimpo/gurae-dong/">구래동 출장마사지</a>, 마산동, 장기동, 운양동은 김포한강신도시 검색 의도와 연결되고, 고촌읍과 풍무동은 서울 강서·김포공항 인접 생활권과 연결됩니다. 통진읍, 양촌읍, 대곶면, 월곶면, 하성면은 차량 이동 기준이 중요한 지역입니다. 생활권별 차이가 궁금하다면 <a href="/gyeonggi/gimpo/area/hangang-newtown/">김포한강신도시 생활권 안내</a>와 <a href="/gyeonggi/gimpo/area/gurae-masan/">구래·마산 생활권 안내</a>를 함께 확인해 보세요.</p>
+<p>김포시 홈타이를 안내할 때 중요한 부분은 생활권을 무리하게 쪼개지 않는 것입니다. 김포시는 동 지역과 읍·면 지역의 성격 차이가 큽니다. <a href="/gurae-dong/">구래동 출장마사지</a>, 마산동, 장기동, 운양동은 김포한강신도시 검색 의도와 연결되고, 고촌읍과 풍무동은 서울 강서·김포공항 인접 생활권과 연결됩니다. 통진읍, 양촌읍, 대곶면, 월곶면, 하성면은 차량 이동 기준이 중요한 지역입니다. 생활권별 차이가 궁금하다면 <a href="/area/hangang-newtown/">김포한강신도시 생활권 안내</a>와 <a href="/area/gurae-masan/">구래·마산 생활권 안내</a>를 함께 확인해 보세요.</p>
 </section>
 
 <section id="areas">
 <h2>대표 지역별 방문 가능 지역 안내</h2>
 <p>대표 지역은 김포본동, 사우동, 풍무동, 장기본동, 장기동, 운양동, 구래동, 마산동, 고촌읍, 양촌읍, 통진읍, 대곶면, 월곶면, 하성면으로 구성합니다. 구래동은 구래역과 김포한강신도시 중심상권을, 마산동은 마산역과 양촌읍 인접권을, 장기동·장기본동은 장기역과 한강신도시 생활권을, 운양동은 운양역과 한강변 주거지를 중심으로 안내합니다. 아래에서 거주하시거나 머무시는 동을 선택해 주세요.</p>
 <ul class="card-grid">
-<li><a href="/gyeonggi/gimpo/gimpobon-dong/">김포본동</a></li>
-<li><a href="/gyeonggi/gimpo/sau-dong/">사우동</a></li>
-<li><a href="/gyeonggi/gimpo/pungmu-dong/">풍무동</a></li>
-<li><a href="/gyeonggi/gimpo/janggibon-dong/">장기본동</a></li>
-<li><a href="/gyeonggi/gimpo/janggi-dong/">장기동</a></li>
-<li><a href="/gyeonggi/gimpo/unyang-dong/">운양동</a></li>
-<li><a href="/gyeonggi/gimpo/gurae-dong/">구래동</a></li>
-<li><a href="/gyeonggi/gimpo/masan-dong/">마산동</a></li>
-<li><a href="/gyeonggi/gimpo/gochon-eup/">고촌읍</a></li>
-<li><a href="/gyeonggi/gimpo/yangchon-eup/">양촌읍</a></li>
-<li><a href="/gyeonggi/gimpo/tongjin-eup/">통진읍</a></li>
-<li><a href="/gyeonggi/gimpo/daegot-myeon/">대곶면</a></li>
-<li><a href="/gyeonggi/gimpo/wolgot-myeon/">월곶면</a></li>
-<li><a href="/gyeonggi/gimpo/haseong-myeon/">하성면</a></li>
+<li><a href="/gimpobon-dong/">김포본동</a></li>
+<li><a href="/sau-dong/">사우동</a></li>
+<li><a href="/pungmu-dong/">풍무동</a></li>
+<li><a href="/janggibon-dong/">장기본동</a></li>
+<li><a href="/janggi-dong/">장기동</a></li>
+<li><a href="/unyang-dong/">운양동</a></li>
+<li><a href="/gurae-dong/">구래동</a></li>
+<li><a href="/masan-dong/">마산동</a></li>
+<li><a href="/gochon-eup/">고촌읍</a></li>
+<li><a href="/yangchon-eup/">양촌읍</a></li>
+<li><a href="/tongjin-eup/">통진읍</a></li>
+<li><a href="/daegot-myeon/">대곶면</a></li>
+<li><a href="/wolgot-myeon/">월곶면</a></li>
+<li><a href="/haseong-myeon/">하성면</a></li>
 </ul>
 <p>김포시의 행정 구역 구성은 <a href="https://www.gimpo.go.kr/" target="_blank" rel="noopener nofollow">김포시청 공식 누리집</a>에서도 확인할 수 있습니다. 방문 가능 여부는 행정동 경계가 아니라 실제 주소와 예약 시간으로 판단합니다.</p>
 </section>
 
 <section id="stations">
 <h2>고촌역·풍무역·사우역·구래역 역세권 안내</h2>
-<p>역세권 페이지는 김포시 지역 안내에서 중요한 역할을 합니다. 김포골드라인을 따라 <a href="/gyeonggi/gimpo/station/gochon-station/">고촌역</a>, <a href="/gyeonggi/gimpo/station/pungmu-station/">풍무역</a>, <a href="/gyeonggi/gimpo/station/sau-station/">사우역</a>, <a href="/gyeonggi/gimpo/station/janggi-station/">장기역</a>, <a href="/gyeonggi/gimpo/station/unyang-station/">운양역</a>, <a href="/gyeonggi/gimpo/station/gurae-station/">구래역</a>, <a href="/gyeonggi/gimpo/station/masan-station/">마산역</a>, <a href="/gyeonggi/gimpo/station/yangchon-station/">양촌역</a>까지 실제 검색 의도와 가까운 기준으로 안내합니다. 김포공항역은 서울 강서구 성격이 강하므로 <a href="/gyeonggi/gimpo/station/gimpo-airport-nearby-area/">김포공항 인접 생활권</a>으로만 다루고, 검단역·계양역은 인천 성격이 강해 김포 핵심 역세권으로 만들지 않습니다. 김포골드라인 역은 역명 기준 1개 페이지만 운영합니다. 전체 목록은 <a href="/gyeonggi/gimpo/station/">역세권 안내</a>에서 확인하세요.</p>
+<p>역세권 페이지는 김포시 지역 안내에서 중요한 역할을 합니다. 김포골드라인을 따라 <a href="/station/gochon-station/">고촌역</a>, <a href="/station/pungmu-station/">풍무역</a>, <a href="/station/sau-station/">사우역</a>, <a href="/station/janggi-station/">장기역</a>, <a href="/station/unyang-station/">운양역</a>, <a href="/station/gurae-station/">구래역</a>, <a href="/station/masan-station/">마산역</a>, <a href="/station/yangchon-station/">양촌역</a>까지 실제 검색 의도와 가까운 기준으로 안내합니다. 김포공항역은 서울 강서구 성격이 강하므로 <a href="/station/gimpo-airport-nearby-area/">김포공항 인접 생활권</a>으로만 다루고, 검단역·계양역은 인천 성격이 강해 김포 핵심 역세권으로 만들지 않습니다. 김포골드라인 역은 역명 기준 1개 페이지만 운영합니다. 전체 목록은 <a href="/station/">역세권 안내</a>에서 확인하세요.</p>
 </section>
 
 <section id="check">
@@ -161,7 +160,7 @@ _BODY = f"""
 """
 
 PAGE = {
-    "path": "gyeonggi/gimpo/",
+    "path": "",
     "title": "김포시 출장마사지｜구래·장기·운양·풍무 홈타이 지역 안내",
     "desc": "김포시 출장마사지·홈타이 예약 전 구래동, 장기동, 운양동, 풍무동, 고촌읍 생활권을 확인하세요.",
     "h1": "김포시 출장마사지 · 김포시 홈타이 지역별 예약 안내",

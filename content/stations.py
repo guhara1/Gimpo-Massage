@@ -15,12 +15,12 @@ _CTA = f"""
 
 def _station(slug, name, title, desc, body):
     return {
-        "path": f"gyeonggi/gimpo/station/{slug}/",
+        "path": f"station/{slug}/",
         "title": title,
         "desc": desc,
         "h1": f"{name} 인근 방문 관리 안내",
         "body": body + PRICING + _CTA,
-        "breadcrumb": [("역세권 안내", "/gyeonggi/gimpo/station/"), (name, None)],
+        "breadcrumb": [("역세권 안내", "/station/"), (name, None)],
     }
 
 
@@ -34,12 +34,12 @@ _HUB_BODY = """
 
 <section>
 <h2>김포골드라인 역세권 한눈에 보기</h2>
-<p>여덟 개 역은 성격이 뚜렷하게 갈립니다. <a href="/gyeonggi/gimpo/station/gochon-station/">고촌역</a>은 서울과 가장 가까운 관문 역이라 강서·공항 방면 통근 생활권이 묻어 있고, <a href="/gyeonggi/gimpo/station/pungmu-station/">풍무역</a>은 풍무지구 아파트 단지가 밀집한 통근형 주거 역세권입니다. <a href="/gyeonggi/gimpo/station/sau-station/">사우역</a>은 김포시청과 중심 행정·상권을 끼고 있어 원도심 생활권의 중심이고, <a href="/gyeonggi/gimpo/station/janggi-station/">장기역</a>과 <a href="/gyeonggi/gimpo/station/unyang-station/">운양역</a>은 김포한강신도시 주거 단지가 이어지는 신도시형 역세권입니다. <a href="/gyeonggi/gimpo/station/gurae-station/">구래역</a>은 신도시에서 가장 번화한 중심상권을 끼고 있어 야간 유동인구가 많고, <a href="/gyeonggi/gimpo/station/masan-station/">마산역</a>은 구래와 양촌 사이의 차분한 주거지, <a href="/gyeonggi/gimpo/station/yangchon-station/">양촌역</a>은 학운산업단지 통근 수요가 더해진 노선 서쪽 끝 역세권입니다. 여기에 행정상으로는 서울이지만 김포 생활권과 맞닿은 <a href="/gyeonggi/gimpo/station/gimpo-airport-nearby-area/">김포공항 인접 생활권</a> 안내를 별도로 두어, 공항 이용객과 고촌·풍무 방면 방문 기준을 정리했습니다.</p>
+<p>여덟 개 역은 성격이 뚜렷하게 갈립니다. <a href="/station/gochon-station/">고촌역</a>은 서울과 가장 가까운 관문 역이라 강서·공항 방면 통근 생활권이 묻어 있고, <a href="/station/pungmu-station/">풍무역</a>은 풍무지구 아파트 단지가 밀집한 통근형 주거 역세권입니다. <a href="/station/sau-station/">사우역</a>은 김포시청과 중심 행정·상권을 끼고 있어 원도심 생활권의 중심이고, <a href="/station/janggi-station/">장기역</a>과 <a href="/station/unyang-station/">운양역</a>은 김포한강신도시 주거 단지가 이어지는 신도시형 역세권입니다. <a href="/station/gurae-station/">구래역</a>은 신도시에서 가장 번화한 중심상권을 끼고 있어 야간 유동인구가 많고, <a href="/station/masan-station/">마산역</a>은 구래와 양촌 사이의 차분한 주거지, <a href="/station/yangchon-station/">양촌역</a>은 학운산업단지 통근 수요가 더해진 노선 서쪽 끝 역세권입니다. 여기에 행정상으로는 서울이지만 김포 생활권과 맞닿은 <a href="/station/gimpo-airport-nearby-area/">김포공항 인접 생활권</a> 안내를 별도로 두어, 공항 이용객과 고촌·풍무 방면 방문 기준을 정리했습니다.</p>
 </section>
 
 <section>
 <h2>핵심 역세권으로 다루지 않는 경우</h2>
-<p>역세권 안내에는 운영 기준이 있습니다. 김포공항역은 김포골드라인의 종착역이지만 행정상 서울 강서구 성격이라, 김포 사이트에서는 단독 역 색인 대신 고촌읍·풍무동과 맞닿은 인접 생활권 기준으로만 다룹니다. 광역철도 연장 등으로 거론되는 검단역·계양역 방면은 인천 성격이 강하므로 김포 핵심 역세권으로 만들지 않습니다. 또한 김포골드라인 추가역이나 광역철도 예정역처럼 아직 개통되지 않은 예정역·미개통역은 단독 색인 페이지로 만들지 않습니다. 운행 중인 실제 역과 김포 생활권에 닿는 인접 안내만 페이지로 두어, 찾아오시는 분이 헛걸음하지 않도록 했습니다. 거주 지역 기준으로 보고 싶으시면 <a href="/gyeonggi/gimpo/">지역별 안내</a>를, 생활권 단위로 보고 싶으시면 <a href="/gyeonggi/gimpo/area/">생활권 안내</a>를, 관리 유형이 먼저 궁금하시면 <a href="/themes/">테마별 안내</a>를 참고해 주세요.</p>
+<p>역세권 안내에는 운영 기준이 있습니다. 김포공항역은 김포골드라인의 종착역이지만 행정상 서울 강서구 성격이라, 김포 사이트에서는 단독 역 색인 대신 고촌읍·풍무동과 맞닿은 인접 생활권 기준으로만 다룹니다. 광역철도 연장 등으로 거론되는 검단역·계양역 방면은 인천 성격이 강하므로 김포 핵심 역세권으로 만들지 않습니다. 또한 김포골드라인 추가역이나 광역철도 예정역처럼 아직 개통되지 않은 예정역·미개통역은 단독 색인 페이지로 만들지 않습니다. 운행 중인 실제 역과 김포 생활권에 닿는 인접 안내만 페이지로 두어, 찾아오시는 분이 헛걸음하지 않도록 했습니다. 거주 지역 기준으로 보고 싶으시면 <a href="/">지역별 안내</a>를, 생활권 단위로 보고 싶으시면 <a href="/area/">생활권 안내</a>를, 관리 유형이 먼저 궁금하시면 <a href="/themes/">테마별 안내</a>를 참고해 주세요.</p>
 </section>
 
 <section>
@@ -66,7 +66,7 @@ _HUB_BODY = """
 
 
 HUB = {
-    "path": "gyeonggi/gimpo/station/",
+    "path": "station/",
     "title": "김포 역세권 출장마사지·홈타이 | 김포골드라인 역별 방문 안내",
     "desc": "김포골드라인 고촌·풍무·사우·장기·운양·구래·마산·양촌역 인근 방문 마사지·홈타이 안내입니다.",
     "h1": "김포 역세권별 안내",
@@ -89,7 +89,7 @@ GOCHON_ST = _station(
 
 <section>
 <h2>인근 생활권과 대표 동</h2>
-<p>고촌역의 행정구역은 <a href="/gyeonggi/gimpo/gochon-eup/">고촌읍</a>이며, 남쪽으로는 <a href="/gyeonggi/gimpo/pungmu-dong/">풍무동</a> 방면 생활권과 자연스럽게 이어집니다. 아라뱃길과 김포공항을 함께 묶은 동선은 <a href="/gyeonggi/gimpo/area/gochon-ara-waterway/">고촌·아라뱃길 생활권</a>으로 정리해 두었으니 위치 감을 잡으실 때 참고하시면 좋습니다. 고촌읍은 신축 단지와 오래된 마을이 섞여 있어 같은 동네 안에서도 진입로가 다른 경우가 많으니, 예약 시 아파트 단지명이나 도로명 주소를 함께 알려주시면 도착이 정확해집니다.</p>
+<p>고촌역의 행정구역은 <a href="/gochon-eup/">고촌읍</a>이며, 남쪽으로는 <a href="/pungmu-dong/">풍무동</a> 방면 생활권과 자연스럽게 이어집니다. 아라뱃길과 김포공항을 함께 묶은 동선은 <a href="/area/gochon-ara-waterway/">고촌·아라뱃길 생활권</a>으로 정리해 두었으니 위치 감을 잡으실 때 참고하시면 좋습니다. 고촌읍은 신축 단지와 오래된 마을이 섞여 있어 같은 동네 안에서도 진입로가 다른 경우가 많으니, 예약 시 아파트 단지명이나 도로명 주소를 함께 알려주시면 도착이 정확해집니다.</p>
 </section>
 
 <section>
@@ -144,7 +144,7 @@ PUNGMU_ST = _station(
 
 <section>
 <h2>인근 생활권과 대표 동</h2>
-<p>풍무역 일대는 대부분 <a href="/gyeonggi/gimpo/pungmu-dong/">풍무동</a>에 속하며, 남동쪽으로는 <a href="/gyeonggi/gimpo/sau-dong/">사우동</a> 방면 생활권과 이어집니다. 고촌과 사우 사이에 자리한 위치 특성은 <a href="/gyeonggi/gimpo/area/pungmu-gochon/">풍무·고촌 생활권</a> 안내에 정리해 두었으니 함께 보시면 위치 감을 잡기 쉽습니다. 풍무지구는 단지 번호와 차수가 촘촘해 한 자리만 달라도 위치가 크게 바뀌니, 예약 시 단지명과 동·호수를 천천히 확인해 주시면 도착이 정확해집니다.</p>
+<p>풍무역 일대는 대부분 <a href="/pungmu-dong/">풍무동</a>에 속하며, 남동쪽으로는 <a href="/sau-dong/">사우동</a> 방면 생활권과 이어집니다. 고촌과 사우 사이에 자리한 위치 특성은 <a href="/area/pungmu-gochon/">풍무·고촌 생활권</a> 안내에 정리해 두었으니 함께 보시면 위치 감을 잡기 쉽습니다. 풍무지구는 단지 번호와 차수가 촘촘해 한 자리만 달라도 위치가 크게 바뀌니, 예약 시 단지명과 동·호수를 천천히 확인해 주시면 도착이 정확해집니다.</p>
 </section>
 
 <section>
@@ -199,7 +199,7 @@ SAU_ST = _station(
 
 <section>
 <h2>인근 생활권과 대표 동</h2>
-<p>사우역 일대는 <a href="/gyeonggi/gimpo/sau-dong/">사우동</a>이며, 서쪽으로는 원도심의 뿌리인 <a href="/gyeonggi/gimpo/gimpobon-dong/">김포본동</a>과 생활권이 이어집니다. 김포시청을 중심으로 한 행정·상권 동선은 <a href="/gyeonggi/gimpo/area/sau-cityhall/">사우·김포시청 생활권</a>에 정리해 두었으니 위치를 가늠하실 때 참고하시면 좋습니다. 원도심은 비슷한 이름의 빌라와 상가 건물이 많고 골목이 얽혀 있으니, 도로명 주소와 함께 시청이나 운동장 같은 큰 기준점을 하나 알려주시면 도착이 훨씬 정확해집니다.</p>
+<p>사우역 일대는 <a href="/sau-dong/">사우동</a>이며, 서쪽으로는 원도심의 뿌리인 <a href="/gimpobon-dong/">김포본동</a>과 생활권이 이어집니다. 김포시청을 중심으로 한 행정·상권 동선은 <a href="/area/sau-cityhall/">사우·김포시청 생활권</a>에 정리해 두었으니 위치를 가늠하실 때 참고하시면 좋습니다. 원도심은 비슷한 이름의 빌라와 상가 건물이 많고 골목이 얽혀 있으니, 도로명 주소와 함께 시청이나 운동장 같은 큰 기준점을 하나 알려주시면 도착이 훨씬 정확해집니다.</p>
 </section>
 
 <section>
@@ -254,7 +254,7 @@ JANGGI_ST = _station(
 
 <section>
 <h2>인근 생활권과 대표 동</h2>
-<p>장기역 일대는 <a href="/gyeonggi/gimpo/janggi-dong/">장기동</a>이며, 인접한 <a href="/gyeonggi/gimpo/janggibon-dong/">장기본동</a>까지 함께 생활권을 이룹니다. 동쪽으로는 운양동 방면으로 이어지는데, 신도시를 가로지르는 이 동선은 <a href="/gyeonggi/gimpo/area/janggi-unyang/">장기·운양 생활권</a>에 정리해 두었으니 위치 감을 잡으실 때 참고하시면 좋습니다. 한강신도시는 같은 브랜드 단지가 여러 차수로 나뉜 곳이 많고 동 번호가 촘촘하니, 예약 시 단지 차수와 동·호수를 함께 알려주시면 도착이 정확해집니다.</p>
+<p>장기역 일대는 <a href="/janggi-dong/">장기동</a>이며, 인접한 <a href="/janggibon-dong/">장기본동</a>까지 함께 생활권을 이룹니다. 동쪽으로는 운양동 방면으로 이어지는데, 신도시를 가로지르는 이 동선은 <a href="/area/janggi-unyang/">장기·운양 생활권</a>에 정리해 두었으니 위치 감을 잡으실 때 참고하시면 좋습니다. 한강신도시는 같은 브랜드 단지가 여러 차수로 나뉜 곳이 많고 동 번호가 촘촘하니, 예약 시 단지 차수와 동·호수를 함께 알려주시면 도착이 정확해집니다.</p>
 </section>
 
 <section>
@@ -309,7 +309,7 @@ UNYANG_ST = _station(
 
 <section>
 <h2>인근 생활권과 대표 동</h2>
-<p>운양역 일대는 <a href="/gyeonggi/gimpo/unyang-dong/">운양동</a>이며, 서쪽으로는 <a href="/gyeonggi/gimpo/janggi-dong/">장기동</a> 방면과 생활권이 이어집니다. 신도시를 가로지르는 이 동선은 <a href="/gyeonggi/gimpo/area/janggi-unyang/">장기·운양 생활권</a>에 정리해 두었으니 위치를 가늠하실 때 참고하시면 좋습니다. 한강변 단지는 강 조망 여부에 따라 동 위치가 제각각이고 같은 단지도 차수가 나뉜 경우가 많으니, 예약 시 단지 차수와 동·호수를 함께 알려주시면 도착이 정확해집니다.</p>
+<p>운양역 일대는 <a href="/unyang-dong/">운양동</a>이며, 서쪽으로는 <a href="/janggi-dong/">장기동</a> 방면과 생활권이 이어집니다. 신도시를 가로지르는 이 동선은 <a href="/area/janggi-unyang/">장기·운양 생활권</a>에 정리해 두었으니 위치를 가늠하실 때 참고하시면 좋습니다. 한강변 단지는 강 조망 여부에 따라 동 위치가 제각각이고 같은 단지도 차수가 나뉜 경우가 많으니, 예약 시 단지 차수와 동·호수를 함께 알려주시면 도착이 정확해집니다.</p>
 </section>
 
 <section>
@@ -364,7 +364,7 @@ GURAE_ST = _station(
 
 <section>
 <h2>인근 생활권과 대표 동</h2>
-<p>구래역의 행정구역은 <a href="/gyeonggi/gimpo/gurae-dong/">구래동</a>이며, 서쪽으로는 <a href="/gyeonggi/gimpo/masan-dong/">마산동</a> 방면 생활권과 이어집니다. 두 동을 묶은 동선은 <a href="/gyeonggi/gimpo/area/gurae-masan/">구래·마산 생활권</a>에, 신도시 전체 범위는 <a href="/gyeonggi/gimpo/area/hangang-newtown/">김포한강신도시 생활권</a>에 정리해 두었으니 위치를 가늠하실 때 함께 보시면 좋습니다. 중심상권은 비슷한 이름의 상가 건물과 오피스텔이 많으니, 도로명 주소와 함께 큰 기준 상가나 사거리를 알려주시면 도착이 정확해집니다.</p>
+<p>구래역의 행정구역은 <a href="/gurae-dong/">구래동</a>이며, 서쪽으로는 <a href="/masan-dong/">마산동</a> 방면 생활권과 이어집니다. 두 동을 묶은 동선은 <a href="/area/gurae-masan/">구래·마산 생활권</a>에, 신도시 전체 범위는 <a href="/area/hangang-newtown/">김포한강신도시 생활권</a>에 정리해 두었으니 위치를 가늠하실 때 함께 보시면 좋습니다. 중심상권은 비슷한 이름의 상가 건물과 오피스텔이 많으니, 도로명 주소와 함께 큰 기준 상가나 사거리를 알려주시면 도착이 정확해집니다.</p>
 </section>
 
 <section>
@@ -419,7 +419,7 @@ MASAN_ST = _station(
 
 <section>
 <h2>인근 생활권과 대표 동</h2>
-<p>마산역 일대는 <a href="/gyeonggi/gimpo/masan-dong/">마산동</a>이며, 동쪽으로는 중심상권을 낀 <a href="/gyeonggi/gimpo/gurae-dong/">구래동</a>과 생활권이 이어집니다. 두 동을 묶은 동선은 <a href="/gyeonggi/gimpo/area/gurae-masan/">구래·마산 생활권</a>에 정리해 두었으니 위치를 가늠하실 때 참고하시면 좋습니다. 서쪽으로는 양촌읍 방면과도 가까운 위치라 단지에 따라 가까운 역이 마산역일 수도, 양촌역일 수도 있으니 예약 시 단지명과 동·호수를 기준으로 알려주시는 편이 정확합니다.</p>
+<p>마산역 일대는 <a href="/masan-dong/">마산동</a>이며, 동쪽으로는 중심상권을 낀 <a href="/gurae-dong/">구래동</a>과 생활권이 이어집니다. 두 동을 묶은 동선은 <a href="/area/gurae-masan/">구래·마산 생활권</a>에 정리해 두었으니 위치를 가늠하실 때 참고하시면 좋습니다. 서쪽으로는 양촌읍 방면과도 가까운 위치라 단지에 따라 가까운 역이 마산역일 수도, 양촌역일 수도 있으니 예약 시 단지명과 동·호수를 기준으로 알려주시는 편이 정확합니다.</p>
 </section>
 
 <section>
@@ -474,7 +474,7 @@ YANGCHON_ST = _station(
 
 <section>
 <h2>인근 생활권과 대표 동</h2>
-<p>양촌역 일대는 <a href="/gyeonggi/gimpo/yangchon-eup/">양촌읍</a>이며, 동쪽으로는 신도시의 <a href="/gyeonggi/gimpo/masan-dong/">마산동</a> 방면과 생활권이 이어집니다. 학운산업단지를 낀 동선은 <a href="/gyeonggi/gimpo/area/yangchon-hagun-industrial/">양촌·학운산단 생활권</a>에 정리해 두었으니 위치를 가늠하실 때 참고하시면 좋습니다. 양촌읍은 신축 단지와 오래된 마을, 산단 인근 숙소가 섞여 있어 같은 동네 안에서도 진입로가 크게 다른 경우가 많으니, 예약 시 도로명 주소와 함께 가까운 기준점을 알려주시면 도착이 정확해집니다.</p>
+<p>양촌역 일대는 <a href="/yangchon-eup/">양촌읍</a>이며, 동쪽으로는 신도시의 <a href="/masan-dong/">마산동</a> 방면과 생활권이 이어집니다. 학운산업단지를 낀 동선은 <a href="/area/yangchon-hagun-industrial/">양촌·학운산단 생활권</a>에 정리해 두었으니 위치를 가늠하실 때 참고하시면 좋습니다. 양촌읍은 신축 단지와 오래된 마을, 산단 인근 숙소가 섞여 있어 같은 동네 안에서도 진입로가 크게 다른 경우가 많으니, 예약 시 도로명 주소와 함께 가까운 기준점을 알려주시면 도착이 정확해집니다.</p>
 </section>
 
 <section>
@@ -529,7 +529,7 @@ AIRPORT_ST = _station(
 
 <section>
 <h2>인근 생활권과 대표 동</h2>
-<p>김포 쪽에서 공항과 가장 가까운 행정구역은 <a href="/gyeonggi/gimpo/gochon-eup/">고촌읍</a>이며, 그 안쪽으로 <a href="/gyeonggi/gimpo/pungmu-dong/">풍무동</a> 생활권이 이어집니다. 공항과 서울 경계를 함께 묶은 동선은 <a href="/gyeonggi/gimpo/area/gimpo-airport-seoul-nearby/">김포공항·서울 인접 생활권</a>에 정리해 두었으니 위치를 가늠하실 때 참고하시면 좋습니다. 공항 자체와 강서구 방면 주소는 위치에 따라 방문 가능 여부가 달라질 수 있으니, 정확한 주소를 알려주시면 가능 여부를 바로 확인해 드립니다. 김포 쪽 고촌·풍무 주소는 평소처럼 자택·숙소 방문이 가능합니다.</p>
+<p>김포 쪽에서 공항과 가장 가까운 행정구역은 <a href="/gochon-eup/">고촌읍</a>이며, 그 안쪽으로 <a href="/pungmu-dong/">풍무동</a> 생활권이 이어집니다. 공항과 서울 경계를 함께 묶은 동선은 <a href="/area/gimpo-airport-seoul-nearby/">김포공항·서울 인접 생활권</a>에 정리해 두었으니 위치를 가늠하실 때 참고하시면 좋습니다. 공항 자체와 강서구 방면 주소는 위치에 따라 방문 가능 여부가 달라질 수 있으니, 정확한 주소를 알려주시면 가능 여부를 바로 확인해 드립니다. 김포 쪽 고촌·풍무 주소는 평소처럼 자택·숙소 방문이 가능합니다.</p>
 </section>
 
 <section>

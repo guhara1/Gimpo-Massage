@@ -205,10 +205,10 @@ def render_page(page: dict) -> str:
       <p class="footer-title">지역</p>
       <ul>
         <li><a href="{HOME}">김포시 메인</a></li>
-        <li><a href="/gyeonggi/gimpo/gurae-dong/">구래동</a></li>
-        <li><a href="/gyeonggi/gimpo/janggi-dong/">장기동</a></li>
-        <li><a href="/gyeonggi/gimpo/station/">역세권 안내</a></li>
-        <li><a href="/gyeonggi/gimpo/area/">생활권 안내</a></li>
+        <li><a href="/gurae-dong/">구래동</a></li>
+        <li><a href="/janggi-dong/">장기동</a></li>
+        <li><a href="/station/">역세권 안내</a></li>
+        <li><a href="/area/">생활권 안내</a></li>
       </ul>
     </nav>
     <nav class="footer-col" aria-label="이용 안내">
@@ -294,20 +294,21 @@ def build() -> None:
     # .nojekyll (GitHub Pages)
     open(os.path.join(ROOT, ".nojekyll"), "w").close()
 
-    # 루트(/) → 김포 메인 리다이렉트
-    home = HOME
-    with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as f:
-        f.write(
-            "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n"
-            "<meta charset=\"utf-8\">\n"
-            f"<meta http-equiv=\"refresh\" content=\"0; url={home}\">\n"
-            f"<link rel=\"canonical\" href=\"{BASE_URL.rstrip('/')}{home}\">\n"
-            "<meta name=\"robots\" content=\"noindex,follow\">\n"
-            f"<title>{BRAND}</title>\n</head>\n<body>\n"
-            f"<p><a href=\"{home}\">{BRAND} 김포시 출장마사지·홈타이 안내로 이동</a></p>\n"
-            f"<script>location.replace('{home}');</script>\n"
-            "</body>\n</html>\n"
-        )
+    # 루트(/) → 김포 메인 리다이렉트 (HOME이 /가 아닌 경우만)
+    if HOME != "/":
+        home = HOME
+        with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as f:
+            f.write(
+                "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n"
+                "<meta charset=\"utf-8\">\n"
+                f"<meta http-equiv=\"refresh\" content=\"0; url={home}\">\n"
+                f"<link rel=\"canonical\" href=\"{BASE_URL.rstrip('/')}{home}\">\n"
+                "<meta name=\"robots\" content=\"noindex,follow\">\n"
+                f"<title>{BRAND}</title>\n</head>\n<body>\n"
+                f"<p><a href=\"{home}\">{BRAND} 김포시 출장마사지·홈타이 안내로 이동</a></p>\n"
+                f"<script>location.replace('{home}');</script>\n"
+                "</body>\n</html>\n"
+            )
 
     width = max(len(p) for p, _, _ in report)
     print(f"{'PATH'.ljust(width)}  CHARS  ROBOTS")
